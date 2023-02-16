@@ -1,0 +1,25 @@
+{
+  "name": "readme-helper",
+  "version": "1.0.0",
+  "description": "this application with prompt user questions about his project and will make readme file for him.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarKubil/README-Helper.git"
+  },
+  "keywords": [
+    "readme readme-helper"
+  ],
+  "author": "MarKub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarKubil/README-Helper/issues"
+  },
+  "homepage": "https://github.com/MarKubil/README-Helper#readme",
+  "dependencies": {
+    "inquirer": "^6.5.0"
+  }
+}

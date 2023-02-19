@@ -1550,20 +1550,57 @@ file in a relevant directory) where a recipient would be likely to
 look for such a notice.
 
 You may add additional accurate notices of copyright ownership.`,
-
+}
+// Checks user selected license
+let licenseBadge;
+let licenseText;
+switch (data.license) {
+    case 'MIT':
+        licenseBadge = 'https://img.shields.io/badge/license-MIT-green.svg';
+        licenseText = license.MIT;
+        break;
+    case 'Apache License 2.0':
+        licenseBadge = 'https://img.shields.io/badge/license-Apache%202.0-green.svg';
+        licenseText = license.Apache2;
+        break;
+    case 'GNU General Public License v3.0':
+        licenseBadge = 'https://img.shields.io/badge/license-GNU%20v3.0-green.svg';
+        licenseText = license.GNUv3;
+        break;
+    case 'Eclipse Public License 2.0':
+        licenseBadge = 'https://img.shields.io/badge/license-Eclipse%20Public%202.0-green.svg';
+        licenseText = license.EclipsePub2;
+        break;
+    case 'Mozilla Public License 2.0':
+        licenseBadge = 'https://img.shields.io/badge/license-Mozilla%20Public%202.0-green.svg';
+        licenseText = license.MozzilaPub2;
 }
 
-
   return `# ${data.title}
+
+![GitHub License](${licenseBadge})
 
 ## Description
 
 ${data.description}
 
+## Table of Contents 
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Contributing](#contributing-here-is-a-header)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
+
 ${license.MIT}
 `;
-
-
 }
 
 module.exports = generateMarkdown;

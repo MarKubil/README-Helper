@@ -11,7 +11,18 @@ const questions = [
   },
   {
     type: 'input',
-    message: `What is your project title?\nAnswer:`,
+    message: `What's your email address?\nAnswer: `,
+    name: 'email'
+  },
+  {
+    type: 'list',
+    message: `What license will you use?`,
+    name: 'license',
+    choices: ['MIT', 'Apache License 2.0', 'GNU General Public License v3.0', 'Eclipse Public License 2.0', 'Mozilla Public License 2.0']
+  },
+  {
+    type: 'input',
+    message: `What's your project title?\nAnswer: `,
     name: 'title'
   },
   {
@@ -23,12 +34,6 @@ const questions = [
     What did you learn?\nAnswer:`,
     name: 'description'
   },
-  {
-    type: 'list',
-    message: `Do you want input picture?`,
-    choices: ['Yes', 'No'],
-    name: 'picture',
-  }
 ];
 
 // function to write README file

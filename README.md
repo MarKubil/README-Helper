@@ -31,7 +31,7 @@ npm install (You need o have node.js installed at your pc)
 you can use this application by running => node index.js
 
 ### Project image:
-![image](img/project.jpg)
+![image](./img/project.JPG)
 
 ## Video
 [![video](https://img.youtube.com/vi/t497sgIZ-B4/maxresdefault.jpg)](https://youtu.be/t497sgIZ-B4)

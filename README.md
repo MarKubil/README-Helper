@@ -1,10 +1,10 @@
 # README-Helper
 
-![GitHub License](https://img.shields.io/badge/license-Eclipse%20Public%202.0-green.svg)
+![GitHub License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## Description
 
-README-helper project was created to help you write high-quality README file for your projects. This command line tool was build using Node.js and it's readme file was generated using tis application.
+Readme-helper project was created to help you write high-quality README file for your projects.This command line tool was build using Node.js and readme file was generated using this application.
 
 ## Table of Contents 
 
@@ -16,9 +16,7 @@ README-helper project was created to help you write high-quality README file for
 
 * [Questions](#questions)
 
-
-
-
+* [Video](#Video)
 
 * [Tests](#Tests)
 
@@ -26,27 +24,28 @@ README-helper project was created to help you write high-quality README file for
 
 To run tests, run the following commands:
 
-npm install (you need to have node.js installed in your machine)
+npm install (You need o have node.js installed at your pc)
 
 ## Usage
 
-You can use this application by running => node index.js
+you can use this application by running => node index.js
 
 ### Project image:
-![image](img/test.jpg)
+![image](img/project.jpeg)
 
-
+## Video
+![video](https://www.youtube.com/watch?v=t497sgIZ-B4)
 
 
 
 ## Tests
 To run tests, run the following command => npm test
 
-## Questionsa
+## License
+
+[MIT License](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
+
+## Questions
 
 If you have any questions about the repo, open an issue or contact me directly at marius.kub@outlook.com.
 You can find more of my work at [MarKub](https://github.com/MarKub/).
-
-## License
-
-[Eclipse Public License version 2.0](https://github.com/apache/iotdb/blob/master/licenses/Eclipse%20Public%20License%20version%202.0%20(EPL-2.0))

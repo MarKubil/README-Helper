@@ -33,20 +33,18 @@ switch (data.license) {
         licenseBadge = 'https://img.shields.io/badge/license-Mozilla%20Public%202.0-green.svg';
         licenseText = license.MozzilaPub2;
 };
+// Checks what user wants input.
 let image = "";
     if (data.includeImage) {
         image = `### Project image:\n![image](${data.imageURL})`;
     };
+
 let video = "";
 let videotable = "";
     if (data.video) {
-        let split = data.videoURL.split('=')
-        videoImg = ''
-        video = `## Video\n![![video](https://img.youtube.com/vi/t497sgIZ-B4/maxresdefault.jpg)](${data.videoURL})`;
+        video = `## Video\n![![video](${data.videoIMG})](${data.videoURL})`;
         videotable = `* [Video](#Video)`
-    }
-
-    
+    };
 
 let credits = "";
 let creditsTable = "";
@@ -54,6 +52,7 @@ let creditsTable = "";
         credits = `## Credits\n${data.credits}`;
         creditsTable = `* [Credits](#Credits)`
     }
+
 let test = "";
 let testTable = "";
     if (data.testConfirm) {

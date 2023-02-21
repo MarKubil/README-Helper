@@ -34,7 +34,7 @@ you can use this application by running => node index.js
 ![image](./img/project.JPG)
 
 ## Video
-[![video](https://img.youtube.com/vi/t497sgIZ-B4/maxresdefault.jpg)](https://youtu.be/t497sgIZ-B4)
+[![video](https://img.youtube.com/vi/nlCjngMSQy4/maxresdefault.jpg)](https://www.youtube.com/watch?v=nlCjngMSQy4)
 
 
 
@@ -48,4 +48,4 @@ To run tests, run the following command => npm test
 ## Questions
 
 If you have any questions about the repo, open an issue or contact me directly at marius.kub@outlook.com.
-You can find more of my work at [MarKub](https://github.com/MarKub/).
+You can find more of my work at [MarKubil](https://github.com/MarKubil/).

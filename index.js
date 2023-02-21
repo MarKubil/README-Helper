@@ -73,7 +73,14 @@ const questions = [
     when: confirmation => confirmation.video,
     type: 'input',
     name: 'videoURL',
-    message: `Please provie Path or link to you video.\nAnswer: `,
+    message: `Please provide Path or link to your video.\nAnswer: `,
+    validate: response => response.length > 0 ? true : `Please provide valid path or link`
+  },
+  {
+    when: confirmation => confirmation.video,
+    type: 'input',
+    name: 'videoIMG',
+    message: `Please provide image of the Video path or link.\nAnswer:`,
     validate: response => response.length > 0 ? true : `Please provide valid path or link`
   },
   {

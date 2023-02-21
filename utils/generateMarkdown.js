@@ -1574,8 +1574,15 @@ switch (data.license) {
     case 'Mozilla Public License 2.0':
         licenseBadge = 'https://img.shields.io/badge/license-Mozilla%20Public%202.0-green.svg';
         licenseText = license.MozzilaPub2;
-}
-
+};
+let image = "";
+    if (data.includeImage) {
+        image = `### Project image:\n![image](${data.imageURL})`
+    };
+let video = "";
+    if (data.video) {
+        video = `## Video\n![Video](${data.videoURL})`
+    }
   return `# ${data.title}
 
 ![GitHub License](${licenseBadge})
@@ -1598,9 +1605,30 @@ ${data.description}
 
 * [Questions](#questions)
 
+## Installation
 
-${license.MIT}
-`;
+To run tests, run the following commands:\n${data.installation}
+
+## Usage
+
+${data.usage}
+
+${image}
+
+${video}
+
+## Credits
+
+${data.credits}
+
+## Questions
+
+If you have any questions about the repo, open an issue or contact me directly at ${data.email}.
+You can find more of my work at [${data.username}](https://github.com/${data.username}/).
+
+## License
+
+${licenseText}`;
 }
 
 module.exports = generateMarkdown;

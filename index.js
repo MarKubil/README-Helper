@@ -7,12 +7,14 @@ const questions = [
   {
     type: 'input',
     message: `What's your repository username?\nAnswer: `,
-    name: 'username'
+    name: 'username',
+    validate: response => response.length > 0 ? true : 'Please enter valid username' 
   },
   {
     type: 'input',
     message: `What's your email address?\nAnswer: `,
-    name: 'email'
+    name: 'email',
+    validate: response => response.length > 0 ? true : 'Please enter valid Email'
   },
   {
     type: 'list',
@@ -23,16 +25,63 @@ const questions = [
   {
     type: 'input',
     message: `What's your project title?\nAnswer: `,
-    name: 'title'
+    name: 'title',
+    validate: response => response.length > 0 ? true : 'Please enter valid title'
   },
   {
     type: 'input',
     message: `Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
     What was your motivation?
-    Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
+    Why did you build this project?
     What problem does it solve?
     What did you learn?\nAnswer:`,
-    name: 'description'
+    name: 'description',
+    validate: response => response.length > 0 ? true : 'Please enter description about your project'
+  },
+  {
+    type: 'input',
+    message: `What are the steps required to install your project?\nAnswer: `,
+    name: 'installation',
+    validate: response => response.length > 0 ? true : `Please provide installation instructions or N/A`
+  },
+  {
+    type: 'input',
+    message: `Provide instructions and examples for use\nAnswer: `,
+    name: 'usage',
+    validate: response => response.length > 0 ? true : `Please provide instructions`
+  },
+  {
+    type: 'confirm',
+    message: 'Do you want to include image of your project?\nAnswer: ',
+    default: true,
+    name: 'includeImage'
+  },
+  {
+    when: confirmation => confirmation.includeImage,
+    type: 'input',
+    name: 'imageURL',
+    message: `Please provie Path or link to you image.\nAnswer: `,
+    validate: response => response.length > 0 ? true : 'Please provide valid path or link'
+  },
+  {
+    type: 'confirm',
+    message: 'Do you want to include Project Video?',
+    name: 'video',
+    default: true
+  },
+  {
+    when: confirmation => confirmation.video,
+    type: 'input',
+    name: 'VideoURL',
+    message: `Please provie Path or link to you video.\nAnswer: `,
+    validate: response => response.length > 0 ? true : `Please provide valid path or link`
+  },
+  {
+    type: 'input',
+    message: `List your collaborators, with links to their GitHub profiles.
+    If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+    If you followed tutorials, include links to those here as well.\nAnswer: `,
+    name: 'credits'
   },
 ];
 

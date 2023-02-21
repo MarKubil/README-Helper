@@ -40,9 +40,14 @@ let image = "";
 let video = "";
 let videotable = "";
     if (data.video) {
-        video = `## Video\n![video](${data.videoURL})`;
+        let split = data.videoURL.split('=')
+        videoImg = ''
+        video = `## Video\n![![video](https://img.youtube.com/vi/t497sgIZ-B4/maxresdefault.jpg)](${data.videoURL})`;
         videotable = `* [Video](#Video)`
     }
+
+    
+
 let credits = "";
 let creditsTable = "";
     if (data.creditsConfirm) {

@@ -8,7 +8,7 @@ const questions = [
     type: 'input',
     message: `What's your repository username?\nAnswer: `,
     name: 'username',
-    validate: response => response.length > 0 ? true : 'Please enter valid username' 
+    validate: response => response.length > 0 ? true : 'Please enter valid username'
   },
   {
     type: 'input',
@@ -65,23 +65,43 @@ const questions = [
   },
   {
     type: 'confirm',
-    message: 'Do you want to include Project Video?',
+    message: 'Do you want to include Project Video?\nAnswer: ',
     name: 'video',
     default: true
   },
   {
     when: confirmation => confirmation.video,
     type: 'input',
-    name: 'VideoURL',
+    name: 'videoURL',
     message: `Please provie Path or link to you video.\nAnswer: `,
     validate: response => response.length > 0 ? true : `Please provide valid path or link`
   },
   {
+    type: 'confirm',
+    message: `Do you want to include test section?\nAnswer: `,
+    name: 'testConfirm',
+    default: true
+  },
+  {
+    when: confirmation => confirmation.testConfirm,
+    type: 'input',
+    name: 'test',
+    message: `Please provide instruction how to test your application\nAnswer: `,
+    validate: response => response.length > 0 ? true : `Please provide valid instructions`
+  },
+  {
+    type: 'confirm',
+    message: `Do you want to include Credits/Collaborators section?`,
+    name: 'creditsConfirm',
+    default: true
+  },
+  {
+    when: confirmation => confirmation.creditsConfirm,
     type: 'input',
     message: `List your collaborators, with links to their GitHub profiles.
-    If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-    If you followed tutorials, include links to those here as well.\nAnswer: `,
-    name: 'credits'
+    If you used any third-party assets that require attribution, list the creators.\nAnswer: `,
+    name: 'credits',
+    validate: response => response.length > 0 ? true : `Please provide credits/collaborators`
   },
 ];
 
